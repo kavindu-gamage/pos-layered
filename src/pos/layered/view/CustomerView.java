@@ -18,6 +18,7 @@ import pos.layered.dto.CustomerDTO;
  */
 public class CustomerView extends javax.swing.JFrame {
     
+    //highly coupled with customerLayer
     private final CustomerController customerController;
     //come to here after creating customer controller
     /**
