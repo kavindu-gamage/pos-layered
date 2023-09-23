@@ -4,6 +4,8 @@
  */
 package pos.layered;
 
+import pos.layered.view.CustomerView;
+
 /**
  *
  * @author kavindu
@@ -14,7 +16,7 @@ public class PosLayered {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new CustomerView().setVisible(true);
     }
     
 }
