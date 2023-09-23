@@ -7,7 +7,7 @@ package pos.layered.controller;
 import java.util.List;
 import pos.layered.service.ServiceFactory;
 import pos.layered.service.custom.CustomerService;
-import pos.layered.dto.CustomerDTO;
+import pos.layered.dto.CustomerDto;
 
 /**
  *
@@ -23,21 +23,21 @@ public class CustomerController {
     // this helps to the maintenance part of the code
     
     
-    public String addCustomer(CustomerDTO customerDTO) throws Exception{
+    public String addCustomer(CustomerDto customerDTO) throws Exception{
         
         return customerService.addCustomer(customerDTO);
     }
-    public String updateCustomer(CustomerDTO customerDTO) throws Exception{
+    public String updateCustomer(CustomerDto customerDTO) throws Exception{
         return customerService.updateCustomer(customerDTO);
     }
     public String deleteCustomer(Integer id) throws Exception{
         return customerService.deleteCustomer(id);
     }
     
-    public CustomerDTO getCustomer(Integer id) throws Exception{
+    public CustomerDto getCustomer(Integer id) throws Exception{
         return customerService.getCustomer(id);
     }
-     public List<CustomerDTO> getAllCustomer() throws Exception{
+     public List<CustomerDto> getAllCustomer() throws Exception{
         return customerService.getAllCustomers();
     }
 }

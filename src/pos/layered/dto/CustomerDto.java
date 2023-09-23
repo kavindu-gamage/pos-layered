@@ -8,17 +8,17 @@ package pos.layered.dto;
  *
  * @author kavindu
  */
-public class CustomerDTO {
+public class CustomerDto {
     private int id;
     private String name;
     private String email;
     private String address;
     private String postalCode;
 
-    public CustomerDTO() {
+    public CustomerDto() {
     }
     
-    public CustomerDTO(int id, String name, String email, String address, String postalCode) {
+    public CustomerDto(int id, String name, String email, String address, String postalCode) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -98,7 +98,7 @@ public class CustomerDTO {
 
     @Override
     public String toString() {
-        return "CustomerDTO{" + "id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", postalCode=" + postalCode + '}';
+        return "CustomerDto{" + "id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", postalCode=" + postalCode + '}';
     }
     
     

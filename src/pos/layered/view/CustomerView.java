@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import pos.layered.controller.CustomerController;
-import pos.layered.dto.CustomerDTO;
+import pos.layered.dto.CustomerDto;
 
 /**
  *
@@ -315,7 +315,7 @@ public class CustomerView extends javax.swing.JFrame {
 
     private void addCustomer(){
         int id = Integer.parseInt(txtId.getText());
-        CustomerDTO customerDTO = new CustomerDTO(id, txtName.getText(), txtEmail.getText(), txtAddress.getText(), txtPostal.getText());
+        CustomerDto customerDTO = new CustomerDto(id, txtName.getText(), txtEmail.getText(), txtAddress.getText(), txtPostal.getText());
 
         try {
             String result = customerController.addCustomer(customerDTO);
@@ -333,7 +333,7 @@ public class CustomerView extends javax.swing.JFrame {
         int row = tblCustomer.getSelectedRow();
         String value = tblCustomer.getModel().getValueAt(row, column).toString();
         int id = Integer.parseInt(value);
-        CustomerDTO customerDTO = new CustomerDTO(id, txtName.getText(), txtEmail.getText(), txtAddress.getText(), txtPostal.getText());
+        CustomerDto customerDTO = new CustomerDto(id, txtName.getText(), txtEmail.getText(), txtAddress.getText(), txtPostal.getText());
 
         try {
             String updateCustomer = customerController.updateCustomer(customerDTO);
@@ -364,7 +364,7 @@ public class CustomerView extends javax.swing.JFrame {
     
     private void loadAllCustomers(){
         try {
-            List<CustomerDTO> customerDTOs = customerController.getAllCustomer();
+            List<CustomerDto> customerDTOs = customerController.getAllCustomer();
             
             String [] columns ={"id","Name","Address","Email","Postal Code"};
             DefaultTableModel dtm = new DefaultTableModel(columns,0){
@@ -376,7 +376,7 @@ public class CustomerView extends javax.swing.JFrame {
             tblCustomer.setModel(dtm);
             
             if(customerDTOs!=null){
-                for (CustomerDTO customer : customerDTOs) {
+                for (CustomerDto customer : customerDTOs) {
                     String[] rowData = {
                         Integer.toString(customer.getId()), customer.getName(), customer.getAddress(), customer.getEmail(), customer.getPostalCode()};
                     dtm.addRow(rowData);

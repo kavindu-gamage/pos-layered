@@ -9,7 +9,7 @@ import java.util.List;
 import pos.layered.dao.DaoFactory;
 import pos.layered.dao.custom.CustomerDao;
 import pos.layered.dao.custom.ItemDao;
-import pos.layered.dto.CustomerDTO;
+import pos.layered.dto.CustomerDto;
 import pos.layered.dto.ItemDto;
 import pos.layered.entity.CustomerEntity;
 import pos.layered.entity.ItemEntity;
