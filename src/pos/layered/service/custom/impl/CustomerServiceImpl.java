@@ -2,13 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pos.layered.db.service.custom.impl;
+package pos.layered.service.custom.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import pos.layered.dao.DaoFactory;
 import pos.layered.dao.custom.CustomerDao;
-import pos.layered.db.service.custom.CustomerService;
+import pos.layered.service.custom.CustomerService;
 import pos.layered.dto.CustomerDTO;
 import pos.layered.entity.CustomerEntity;
 
@@ -26,7 +26,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public String addCustomer(CustomerDTO customerDTO) throws Exception {
         if(customerDao.add(new CustomerEntity(customerDTO.getId(), customerDTO.getName(),customerDTO.getEmail(), customerDTO.getAddress(), customerDTO.getPostalCode()))){
-            return "Successfully add";
+            return "Successfully added";
         }
         else{
             return "Fail";
@@ -36,7 +36,7 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public String updateCustomer(CustomerDTO customerDTO) throws Exception {
         if(customerDao.update(new CustomerEntity(customerDTO.getId(), customerDTO.getName(),customerDTO.getEmail(), customerDTO.getAddress(), customerDTO.getPostalCode()))){
-            return "Successfully add";
+            return "Successfully updated";
         }
         else{
             return "Fail";

@@ -5,8 +5,8 @@
 package pos.layered.controller;
 
 import java.util.List;
-import pos.layered.db.service.ServiceFactory;
-import pos.layered.db.service.custom.CustomerService;
+import pos.layered.service.ServiceFactory;
+import pos.layered.service.custom.CustomerService;
 import pos.layered.dto.CustomerDTO;
 
 /**

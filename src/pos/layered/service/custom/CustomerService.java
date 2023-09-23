@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package pos.layered.db.service.custom;
+package pos.layered.service.custom;
 
 import java.util.List;
-import pos.layered.db.service.SuperService;
+import pos.layered.service.SuperService;
 import pos.layered.dto.CustomerDTO;
 
 /**

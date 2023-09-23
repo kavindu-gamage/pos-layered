@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pos.layered.db.service;
+package pos.layered.service;
 
-import pos.layered.db.service.custom.impl.CustomerServiceImpl;
+import pos.layered.service.custom.impl.CustomerServiceImpl;
+import pos.layered.service.custom.impl.ItemServiceImpl;
 
 /**
  *
@@ -35,6 +36,8 @@ public class ServiceFactory {
         switch (type) {
             case CUSTOMER:
                 return new CustomerServiceImpl();
+            case ITEM:
+                return new ItemServiceImpl();
             default:
                 return null;
         }

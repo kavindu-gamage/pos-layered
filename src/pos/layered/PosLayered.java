@@ -5,6 +5,7 @@
 package pos.layered;
 
 import pos.layered.view.CustomerView;
+import pos.layered.view.ItemView;
 
 /**
  *
@@ -16,7 +17,7 @@ public class PosLayered {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new CustomerView().setVisible(true);
+        new ItemView().setVisible(true);
     }
     
 }

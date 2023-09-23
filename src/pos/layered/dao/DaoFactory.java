@@ -5,6 +5,7 @@
 package pos.layered.dao;
 
 import pos.layered.dao.custom.impl.CustomerDaoImpl;
+import pos.layered.dao.custom.impl.ItemDaoImpl;
 
 /**
  *
@@ -29,15 +30,16 @@ public class DaoFactory {
     public SuperDao getDao(DaoTypes types){
         switch (types) {
             case CUSTOMER:
-                
                 return new CustomerDaoImpl();
+            case ITEM:
+                return new ItemDaoImpl();
             default:
                 return null;
         }
     }
     
     public enum DaoTypes{
-        CUSTOMER
+        CUSTOMER, ITEM
     }
     
 }
