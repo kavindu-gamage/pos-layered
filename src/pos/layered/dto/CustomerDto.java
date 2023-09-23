@@ -17,7 +17,7 @@ public class CustomerDto {
 
     public CustomerDto() {
     }
-    
+
     public CustomerDto(int id, String name, String email, String address, String postalCode) {
         this.id = id;
         this.name = name;
@@ -100,6 +100,6 @@ public class CustomerDto {
     public String toString() {
         return "CustomerDto{" + "id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", postalCode=" + postalCode + '}';
     }
-    
+
     
 }
